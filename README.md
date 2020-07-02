@@ -1,1 +1,1 @@
-# seq3-studyhall
+# SE Q3 Study Hall Projects
