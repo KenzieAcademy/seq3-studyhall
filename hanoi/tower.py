@@ -14,6 +14,7 @@ ERROR_TOWER_RULE = 'Cannot place larger disk onto smaller disk. Try again.'
 
 
 def print_towers():
+    """Display the current representation of the towers."""
     print_tower1 = towers[0][::]
     print_tower1.extend([' '] * (3 - len(towers[0])))
     print_tower2 = towers[1][::]
@@ -29,14 +30,17 @@ def print_towers():
 
 
 def does_tower_exist(tower):
+    """Returns whether the tower number exists."""
     return tower in range(1, len(towers)+1)
 
 
 def is_tower_empty(tower):
+    """Returns whether the tower is empty."""
     return not bool(len(towers[tower-1]))
 
 
 def move_disk(from_tower, to_tower):
+    """Moves a disk from one tower to another."""
     global total_moves
     from_tower -= 1
     to_tower -= 1
@@ -57,6 +61,7 @@ def move_disk(from_tower, to_tower):
 
 
 def main():
+    """Main game loop."""
     global has_error
 
     while True:
